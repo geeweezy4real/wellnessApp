@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>pyraCheck</title> 
+	<meta name="description" content="Best App Ever"/>
+	
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link href="../appBeta/css/test.css" rel="stylesheet">
+	<!-- end: CSS -->
+
+<script type="text/javascript">
+
+//THis is how we will store the clicked data in a json file by using the selections
+//LOCAL STorage
+var selections = {waterT: 0, proteinsT:0, fruitsT:0, veggiesT:0, exerciseT:0, grainsT:0 };//creates and object waiting to store attributes
+
+function checkAmount(thisItem){
+ var output = thisItem.parentElement.parentElement.getElementsByClassName("output")[0];
+ var tick = thisItem.parentElement.parentElement.parentElement.id;
+
+//This will add and store new data for checked boxes
+ if (thisItem.checked)
+ {
+   output.innerHTML = parseInt(output.innerHTML) + 1;
+ }
+ else
+ {
+   output.innerHTML = parseInt(output.innerHTML) - 1;
+ }
+selections[tick] = output.innerHTML;//stores all the checked data and ready to be stringifies by JSON
+}
+//this is where we use local storage
+//LOCAL STORAGE
+
+function storeData(){
+ localStorage.setItem("selections", JSON.stringify(selections));
+}
+//Getting stuff out of Local storage
+
+//Settings transtion by double click
+// clicked = false;
+// function doubleClick(){
+//   var buttonMenu = document.getElementById("link-menu");
+//   var buttonStats = document.getElementById("link-statsT");
+// clicked =false;
+//   if(clicked){
+//     clicked = false;
+//     buttonMenu.setAttribute("href","#home");
+//   }
+//   else{
+//     clicked = true;
+//     buttonMenu.setAttribute("href","#menuT");
+//   }
+//   }
+// }
+// function doubleClick(e){
+//   alert(this.target.id);
+// }
+// var elementId = e.id;
+
+
+
+
+
+ </script>
+
+</head>
+
+<body>
+	<!--header-->
+	<!--start: Header -->
+	<header>
+	<div>
+</div>
+
+
+	<div id="bars">
+<a id="link-menuT"  onclick= "doubleClick();" class="button"  href="#menuT"> <img src="images/bars.png" /></a>pyraCheck
+ </div>
+
+			<!--start: Navigation -->
+	
+	     	
+
+			<!--end: Navigation -->
+											
+	
+		<!--end: Container-->			
+			
+	</header>
+<!-- //The side Options panel
+-->	 
+
+<div id="menuT" class="panel3" >
+     <div id="me" >
+        <p id="settings" class="button"><img src="images/settings.png"/>Settings</p>
+        <p id="profile" class="button"><img src="images/profile.png"/>Profile</p>
+        <p id="feedback" class="button"><img src="images/feedback.png"/>feedback</p>
+        <p id="about" class="button"><img src="images/settings.png"/>About</p>
+	</div>
+ </div>
+
+     <div id="waterT" class="panel">
+     <div class="page">
+        <h2>Water</h2>
+       <div class="output">0</div>
+       <div id="page-wrap">
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this) ,storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this) ,storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this) ,storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this) ,storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this) ,storeData();"/>
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+     </div>
+  </div>
+		<!--     Main-->    
+<div id="heartT" class="panel">
+       <div class="content">
+       <div class="output">0</div>
+         <h2>Heart</h2>
+
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+     </div>
+  </div>
+
+<div id="proteinsT" class="panel2">
+ <div class="page">
+       <h2>Protein</h2>
+             <div class="output">0</div>
+               <div class="page-wrap">
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+     </div>
+  </div>
+
+ <div id="grainsT" class="panel">
+     <div class="page">
+       <h2>Grains</h2>
+       <div class="output">0</div>
+             <div class="page-wrap">  
+
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+     </div>
+  </div>
+
+
+  <div id="exerciseT" class="panel">
+     <div class="page">
+       <h2>Exercise</h2>
+       <div class="output">0</div>
+             <div class="page-wrap">
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this)"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+     </div>
+  </div>
+<div id="fruitsT" class="panel2">
+     <div class="page">
+       <h2>Fruits</h2>
+            <div class="output">0</div>
+               <div class="page-wrap">
+
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+     </div>
+  </div>
+
+   <div id="veggiesT" class="panel2">
+     <div class="page">
+       <h2>Veggies</h2>
+
+       <div class="output">0</div>
+             <div class="page-wrap">
+
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();,storeData();"/>
+<input type="checkbox" name="waterCheck" onclick="checkAmount(this),storeData();"/>
+
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+     </div>
+  </div>
+
+     <div id="statsT" class="panel3">
+     <div class="page">
+       <h2>Stats</h2>
+
+       <div class="output">0</div>
+             <div class="page-wrap">
+       <div id="waterS">0</div>
+
+ </div>
+         <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+     </div>
+  </div>
+
+
+<!--  *  MENU  --> 
+<!--		start: Container -->
+   	<div class="container">
+   <div id="app-box" id="link-home">
+     <div id="app-oval">
+        <div id="app-oval-radar">
+           <div id="heart-radar"  class="button">
+          </div>
+          <a id="heart" id="link-heartT"  class="button"  href="#heartT"><!-- <img class="icons"  src="images/heart.png"> -->
+          </a>
+           <a id="fruits" id ="link-fruitsT"  class="button" href="#fruitsT"><!-- <img class="icons" src="images/apple.png"> -->
+           </a>
+            <a id="veggies" id ="link-veggiesT" class="button" href="#veggiesT"><!-- <img class="icons" src="images/carrot.png"> -->
+            </a>
+           <a id="grains" id ="link-grainsT" class="button" href="#grainsT"><!-- <img class="icons" src="images/wheat.png"> -->
+           </a>
+           <a id="proteins" id ="link-proteinsT" class="button" href="#proteinsT"><!-- img class="icons" src="images/chicken.png"> -->
+           </a>
+           <a id="exercise" id ="link-exerciseT" class="button"  href="#exerciseT"><!-- <img class="icons" src="images/dumbell.png"> -->
+            </a>
+            <a id="water" id ="link-waterT" class="button" href="#waterT"><!-- <img class="icons" src="images/rain.png"> -->
+            </a>
+         </div>
+     </div>
+           <div class="hi"></div>
+
+       </div> 
+     <!-- End: Menu-->
+
+     </div>
+
+           <!--end: Container-->
+	
+	<footer>
+  <a href="#statsT" id ="link-statsT" onClick="doubleClick();"> <img id ="StatsImg" type="button" src="images/stats.png"/></a>
+<a href="#"><img src="
+ images/fb.png"/></a>
+<a href="#"><img src="images/gplus.png"/></a>
+<a href="#home"><img id="return" src="images/return.png"/></a>
+
+</footer>
+ <!--end: footer-menu-->
+
+</body>
+</html>
+<!-- Localized -->

@@ -1,0 +1,794 @@
+/*----------------------------------*\
+ *CSS STARTS HERE
+ \*------------------------------------*/
+/*-------------------------*\
+* RESET CSS
+\*---------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td, footer { 
+  margin:0;
+  padding:0;
+}
+
+body, footer{
+  margin: auto;
+}
+/******************************\
+* The Animation Animal
+*******************************/
+
+body{
+    background-image: url(/images/bg2.png);
+} 
+
+/*body img{
+  z-index: -15;
+opacity:0.4;
+filter:alpha(opacity=40);
+  }  */ 
+
+#wrapper{
+  width: 100% !important;
+}
+#heart{
+    @-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(1); }
+	30% { -webkit-transform: scale(1); }
+	40% { -webkit-transform: scale(1.08); }
+	50% { -webkit-transform: scale(1); }
+	60% { -webkit-transform: scale(1); }
+	70% { -webkit-transform: scale(1.05); }
+	80% { -webkit-transform: scale(1); }
+	100% { -webkit-transform: scale(1); }
+}
+}
+#heart {
+	-webkit-animation-name: 'pulse_animation';
+	-webkit-animation-duration: 5000ms;
+	-webkit-transform-origin:70% 70%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+.hi {
+    width: 50px;
+    height: 72px;
+    background-image: url(/images/sprite-steps.png);
+    
+    -webkit-animation: play .8s steps(10) infinite;
+       -moz-animation: play .8s steps(10) infinite;
+        -ms-animation: play .8s steps(10) infinite;
+         -o-animation: play .8s steps(10) infinite;
+            animation: play .8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-ms-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+header{
+  display: inline;
+  z-index: 3;
+  height: 40px !important;
+  margin-top: none !important;
+  width: 100% !important;
+  background: #2F2300;
+  position: fixed;
+top:0px;
+margin-bottom: 100px !important;
+display: inline;
+border-bottom: .1em solid grey;
+
+}
+#bars img{
+      padding: 9px 3px 0px 3px;;
+  float: left !important;
+  margin-right: 60px;
+}
+#bars {
+  cursor: pointer;
+  z-index: 1;
+    margin-right: 3px;
+    padding: 9px 3px 0px 3px;;
+    display: inline;
+    width: 100%;
+    position: relative;
+    height: auto;
+    color: white;
+  font-size: 24px;
+  text-align: center;
+/*  text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+*/  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+
+
+  }
+
+
+
+/****************
+*The Checker/ Counter
+******************/
+.output{
+  text-align: center;
+  font-size: 110px;
+  width: 90px;
+  height: 90px;
+  padding: 1px 0px 0px 0px;
+  margin: 5px auto;
+  color: #fff;
+text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+z-index: 9;
+background-color: rgba(0,0,0,0.4) !important;
+-webkit-border-top-left-radius: 400px 400px;
+-webkit-border-top-right-radius: 400px 400px;
+-webkit-border-bottom-right-radius: 400px 400px;
+-webkit-border-bottom-left-radius: 400px 400px;
+-moz-border-radius: 400px / 400px;
+border-radius: 400px / 400px;
+}
+.container {
+  height: 100% !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+
+  footer{
+    z-index: 3;
+    background : #2F2300;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-top: .1em solid black;
+ 
+  }
+  footer img{
+       box-shadow:         inset 0 0 10px #000000;
+/*    box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+*/    position: relative;
+    height: 35px;
+    width: 40px;
+    bottom: 0px;
+    margin: 2px 5px 0 auto;
+    display: inline;
+    padding: 0 3px 0 3px;
+/*    border: 0.1em groove white;
+*/    overflow: hidden;
+    
+  }
+  footer #return{
+    float: right !important;
+    margin-right: 3px;
+    padding: 3px 3px 0px 3px;
+  }
+
+  footer #home{
+    z-index: 4;
+    content: url(/images/home.png);
+  }
+  footer #facebook{
+    z-index: 4;
+    content: url(images/facebook.png);
+    border-left: 1px solid grey;
+
+  }
+  footer #blog{
+    z-index: 4;
+    content: url(images/blog.png);
+    border-left: 1px solid grey ; 
+
+  }
+  footer #stats{
+    z-index: 4;
+    content: url(images/stats.png);
+    border-left: 1px solid grey;
+
+  }
+
+/*----------------------------*\
+ * CHECKBOXES
+ \*------------------------------------*/
+
+}
+
+
+.page-wrap input[type=checkbox]{
+   visibility: hidden !important;
+  margin-right:45px !important;
+}
+#waterT input[type=checkbox]{
+  visibility: hidden;
+  margin-right:25px;
+}
+
+#waterT input[type=checkbox]:before { 
+  content:url(/images/bottle.png);
+  display:inline-block !important;
+  width:5px; 
+  height:5px;
+  visibility: visible; 
+z-index: 115;
+}
+
+#waterT input[type=checkbox]:checked:before {
+ content:url/images/bottleOp.png);
+ display:inline-block; 
+ width:5px;
+ height:5px; 
+ }
+
+
+#fruitsT input[type=checkbox]{
+  visibility: hidden !important;
+  margin-right:25px !important;
+}
+
+#fruitsT input[type=checkbox]:before { 
+  content:url(/images/pineapple.png);
+  display:inline-block;
+  width:5px; 
+  height:5px;
+  visibility: visible; 
+
+}
+#fruitsT input[type=checkbox]:checked:before {
+ content:url(/images/pineappleOp.png);
+ display:inline-block; 
+ width:5px;
+ height:5px; 
+ }
+
+ #veggiesT input[type=checkbox]{
+  visibility: hidden;
+  margin-right:25px;
+}
+
+#veggiesT input[type=checkbox]:before { 
+  content:url(/images/carrot.png);
+  display:inline-block !important;
+  width:5px; 
+  height:5px;
+  visibility: visible; 
+
+}
+
+#veggiesT input[type=checkbox]:checked:before {
+ content:url(/images/carrotOp.png);
+ display:inline-block; 
+ width:5px;
+ height:5px; }
+
+ #proteinsT input[type=checkbox]{
+  visibility: hidden;
+  margin-right:25px;
+}
+
+#proteinsT input[type=checkbox]:before { 
+  content:url(/images/chicken1.png);
+  display:inline-block !important;
+  width:5px; 
+  height:5px;
+  visibility: visible; 
+
+}
+
+#proteinsT input[type=checkbox]:checked:before {
+ content:url(/images/chickenOp.png);
+ display:inline-block; 
+ width:5px;
+ height:5px; }
+
+ #exerciseT input[type=checkbox]{
+  visibility: hidden;
+  margin-right:25px;
+}
+
+#exerciseT input[type=checkbox]:before { 
+  content:url(/images/dumbell.png);
+  display:inline-block !important;
+  width:5px; 
+  height:5px;
+  visibility: visible; 
+
+}
+
+#exerciseT input[type=checkbox]:checked:before {
+ content:url(/images/dumbellOp.png);
+ display:inline-block; 
+ width:5px;
+ height:5px; }
+
+
+ #grainsT input[type=checkbox]{
+  visibility: hidden;
+  margin-right:25px;
+}
+
+#grainsT input[type=checkbox]:before { 
+  content:url(/images/grains1.png);
+  display:inline-block !important;
+  width:5px; 
+  height:5px;
+  visibility: visible; 
+
+}
+
+#grainsT input[type=checkbox]:checked:before {
+ content:url(/images/grainsOp.png);
+ display:inline-block; 
+ width:5px;
+ height:5px; }    
+
+
+
+/*----------------------------*\
+ *  Ratings CSS
+ \*------------------------------------*/
+
+ .content{
+/*  right: 40px;
+*//*  left: 280px;
+*/  top: 0px;
+position: absolute;
+padding-bottom: 30px;
+}
+#me p{
+  font-size: 30px;
+  width: 100%;
+height: 60px !important;
+color: white;
+margin-bottom:none !important;
+text-align: left;
+border: .1em groove grey;
+padding-top: 10px;
+
+}
+
+#menuT{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(114, 122, 134)),to(rgb(80, 88, 100)));
+    background-image: -webkit-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    background-image: -moz-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    background-image: -o-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    background-image: -ms-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    background-image: linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#727a86', EndColorStr='#505864');
+    border-bottom: 1px solid #33373d;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #878e98;
+    -moz-box-shadow: inset 0px 1px 0px 0px #878e98;
+    box-shadow: inset 0px 1px 0px 0px #878e98;
+}
+#menuT #settings{
+background: tomato;
+}
+#menuT #profile{
+background: lightblue;
+}
+#menuT  #feedback{
+background: grey;
+}
+#menuT #about{
+background: tomato;
+}
+.page h2{
+  font-size: 110px;
+  padding: 5px auto;
+  margin-top: 20px;
+  color: #fff;
+/*  color: rgba(255,255,255,0.9);
+*/  background: green;
+text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+margin-bottom: 0 !important;
+}
+.page p{
+  font-size: 18px;
+  padding: 10px;
+  line-height: 24px;
+  color: #fff;
+  display: inline-block;
+  background: rgb(0,164,188);
+  padding: 10px;
+  margin: 70px 0px;
+}
+#fruitsT .page h2 {
+  background: tomato !important;
+}
+#proteinsT .page h2 {
+  background: red !important;
+  font-size: 95px !important;
+}
+#waterT .page h2 {
+  background: navy !important;
+}
+#grainsT .page h2 {
+  background: yellow!important;
+  font-size: 95px !important;
+}
+#veggiesT .page h2 {
+  background: green!important;
+  font-size: 90px !important;
+}
+#exerciseT .page h2 {
+  background: purple!important;
+  font-size: 85px !important;
+}
+#about{
+  z-index: 13;
+}
+/*--------------------------------------*\
+* PANELS TRANSITION
+\*--------------------------------------*/
+
+.panel{
+  min-width: 95%;
+  height: 98%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /*margin-top: -190%;*/
+  -webkit-transform: translateY(-190%);
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  background: #000;
+  box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+  z-index: 2;
+  -webkit-transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  -o-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+.panel:target{
+  margin-top: 0%;
+  /*top:0px;*/
+  -webkit-transform: translateY(0);
+  visibility: visible;
+  background-color: rgba(50, 205,50, 0.8)!important;
+}
+
+
+.panel2{
+  width: 95%;
+  min-height: 98%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  background-color: #000;
+  box-shadow: 4px -4px 4px rgba(0,0,0,0.2);
+  -webkit-transform: translateX(-190%);
+  z-index:2;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+
+}
+.panel2:target{
+  -webkit-transform: translateX(0);
+  margin-left: 0%;
+  visibility: visible;
+  background-color: rgba(0,100,0,0.5);
+}
+
+.panel3{
+     width: 55%;
+  min-height: 98%;
+  position: absolute;
+  visibility: hidden;
+
+  background-color: #000;
+  box-shadow: 4px -4px 4px rgba(0,0,0,0.2);
+  margin-left: -102%;
+  z-index:2;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+.panel3:target{
+    top:0px;
+  margin-left: 0%;
+  visibility: visible;
+  background-color: black;
+}
+
+/*--------------------------------------*\
+* LINKS
+\*--------------------------------------*/
+
+#heartT:target ~ #header #navigation #link-heartT,
+#menuT:target ~ #header #menu #link-menuT,
+#proteinsT:target ~ #header #navigation #link-proteinsT,
+#grainsT:target ~ #header #navigation #link-grainsT,
+#fruitsT:target ~ #header #navigation #link-fruitsT,
+#veggiesT:target ~ #header #navigation #link-veggiesT,
+#waterT:target ~ #header #navigation #link-waterT,
+#exerciseT:target ~ #header #navigation #link-exerciseT,
+#statsT:target ~ #header #navigation #link-statsT{
+  background: #000;
+  color: #fff;
+}
+#heartT{
+  background-color: rgba(255,99,77, 0.4) !important; 
+}
+#proteinsT{
+  background-color: rgba(188,143,143,0.8)!important; 
+}
+#waterT{
+  background-color: rgba(100,149,237,0.8)!important;
+}
+#excerciseT{
+  background-color: rgba(2,0,2,0.4)!im; 
+}
+/*----------------------------------------*\
+*TRANSITION OTHER DIRECTION
+\*------------------------------------------*/
+/*------------------------------------*\
+HOVER EFFECT & ANIMATION
+We will all the tiles have a hover effect
+refer to 
+\*------------------------------------*/
+
+#veggies:hover, #proteins:hover, #grains:hover, #fruits:hover,#water{
+
+}
+
+/*This is for the animation
+*/
+
+#fruits{
+  right:-30px;
+  bottom: 80px;
+  content: url(/images/fruit.jpg)!important;
+
+}
+
+#grains{
+  top:-10px;
+  right:-0.5px;
+  content: url(/images/grains.png)!important;
+}
+#proteins{
+  top: -10px;
+  content: url(/images/chicken.png)!important;
+}
+
+#veggies{
+  bottom:-20px;
+  content: url(/images/veggies.jpg)!important;
+
+
+}
+#exercise {
+  content: url(/images/fitness.png)!important;
+  z-index:1;
+  bottom:-15px;
+  left:180px;
+}
+
+#water {
+ left:-30px;
+ bottom: 80px;
+  content: url(/images/water.jpg)!important;
+}
+#heart img{
+  position: center;
+  margin-top: 10px;
+  padding-left:none !important;
+  z-index:2;
+}
+#heart{
+  z-index:1;
+  left:90px;
+  bottom: 90px;
+background-color: grey !important;
+    content: url(/images/heart.png)!important;
+}
+#heart-radar{
+  position: relative;
+  width:140px !important;
+  height:140px !important;
+  z-index: -12;
+  top: 55px;
+  right: -55px;
+  background-color: rgba(0,0,0,0.4) !important;
+  -webkit-border-top-left-radius: 400px 400px;
+  -webkit-border-top-right-radius: 400px 400px;
+  -webkit-border-bottom-right-radius: 400px 400px;
+  -webkit-border-bottom-left-radius: 400px 400px;
+  -moz-border-radius: 400px / 400px;
+  border-radius: 400px / 400px;
+}
+#app-box{
+  margin-top: 100px;
+  width: 100%;
+  margin-bottom: none !important;
+  margin-bottom: auto !important;
+  }
+
+
+  .button:active {
+    -webkit-box-shadow: inset 0px 0px 3px rgba(0,0,0, .8);
+    -moz-box-shadow: inset 0px 0px 3px rgba(0,0,0, .8);
+    box-shadow: inset 0px 0px 3px rgba(0,0,0, .8);
+  }
+
+  #fruits, #veggies, #grains, #proteins, #exercise,#water, #heart
+  {
+    background: green;/*#3851bc;*/
+    position:absolute;
+    width:50px;
+    height:50px;
+    /* css3 */
+
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    -moz-box-shadow:0 0 5px #aaa;
+    -webkit-box-shadow:0 0 5px #aaa;
+    /* reduce the damage in FF3.0 */
+
+    border:0.8px solid #aaa;
+    padding: 15px 15px 15px 15px ; 
+    display:inline-block;
+    /*    text-shadow: -1px -1px 0 rgba(0,0,0,0.3) !important;*/
+/*background-image: -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0.1, rgb(255, 255, 255)),
+  color-stop(1, rgb(191, 233, 222)),
+  color-stop(1, rgb(230, 255, 255))
+);
+background-image: -o-linear-gradient(bottom, rgb(255, 255, 255) 10%, rgb(191, 233, 222) 100%, rgb(230, 255, 255) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(255, 255, 255) 10%, rgb(191, 233, 222) 100%, rgb(230, 255, 255) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 10%, rgb(191, 233, 222) 100%, rgb(230, 255, 255) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(255, 255, 255) 10%, rgb(191, 233, 222) 100%, rgb(230, 255, 255) 100%);
+background-image: linear-gradient(to bottom, rgb(255, 255, 255) 10%, rgb(191, 233, 222) 100%, rgb(230, 255, 255) 100%);*/
+
+background-size: 60px 60px;
+background-position: center center;
+background-attachment: fixed;
+}
+/*----------------------------*\
+ *  TRANSITIONS
+ \*------------------------------------*/
+ /* Effect 8 */
+ .button {
+  background: rgba(255,255,255,0.1);
+  -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+  -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+  transition: transform ease-out 0.1s, background 0.2s;
+}
+
+/*.button:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: -1;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  }*/
+
+  .button:hover {
+    background: rgba(255,255,255,0.05);
+    -webkit-transform: scale(0.93);
+    -moz-transform: scale(0.93);
+    -ms-transform: scale(0.93);
+    transform: scale(0.93);
+    color: #fff;
+  }
+
+  .button:after {
+    -webkit-animation: sonarEffect 1.3s ease-out 75ms;
+    -moz-animation: sonarEffect 1.3s ease-out 75ms;
+    animation: sonarEffect 1.3s ease-out 75ms;
+  }
+
+  @-webkit-keyframes sonarEffect {
+    0% {
+      opacity: 0.3;
+    }
+    40% {
+      opacity: 0.5;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+      -webkit-transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes sonarEffect {
+    0% {
+      opacity: 0.3;
+    }
+    40% {
+      opacity: 0.5;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+      -moz-transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  @keyframes sonarEffect {
+    0% {
+      opacity: 0.3;
+    }vider Records Request</a> form.(Be sure to include enough information about the health care provider needs to receive records from us.)</li>
+<li>Fax, mail, or deliver the form to the <a href="x34828.xml"> Student Health Center</a></li>
+    40% {
+      opacity: 0.5;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+/*------------------------------------*\
+  Oval and box
+  \*------------------------------------*/
+  #app-oval{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 1em auto 15px;
+    border:2px dotted  green;
+/*    border-width: 0.4em; 
+*//*border-style: solid;
+*/    
+color: #000;
+-webkit-border-top-left-radius: 400px 400px;
+-webkit-border-top-right-radius: 400px 400px;
+-webkit-border-bottom-right-radius: 400px 400px;
+-webkit-border-bottom-left-radius: 400px 400px;
+-moz-border-radius: 400px / 400px;
+border-radius: 400px / 400px;
+
+
+/**   This is for the animation
+**/
+-webkit-animation: cssAnimation 1s  ease-in-out;
+-moz-animation: cssAnimation 1s ease-in-out;
+-o-animation: cssAnimation 1s  ease-in-out;
+}
+@-webkit-keyframes cssAnimation {
+  from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+  to { -webkit-transform: rotate(360deg) scale(0.833) skew(1deg) translate(-31px); }
+}
+@-moz-keyframes cssAnimation {
+  from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+  to { -moz-transform: rotate(360deg) scale(0.833) skew(1deg) translate(-31px); }
+}
+@-o-keyframes cssAnimation {
+  from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+  to { -o-transform: rotate(360deg) scale(0.833) skew(1deg) translate(-31px); }
+
+}

@@ -1,0 +1,193 @@
+/**********************
+*Animation for the heart
+***********************/
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+    opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+      opacity: 0.75;
+   }
+  }
+
+#heart {
+  -webkit-animation-name: pulse; 
+  -webkit-animation-duration: 1.5s; 
+  -webkit-animation-iteration-count: infinite;
+}
+ 
+ /***************
+* Animatin for the penguin
+************************/
+.hi {
+    width: 50px;
+    height: 72px;
+    background-image: url(../../appBeta/images/sprite-steps.png);
+    
+    -webkit-animation: play .8s steps(10) infinite;
+            animation: play .8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+ul {
+  float: left;
+  padding-left: 20px;
+  list-style: none;
+  -webkit-animation: ticker 15s cubic-bezier(1, 0, .5, 0) infinite;
+  }
+ul:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  animation-play-state: paused;
+}
+li {line-height: 26px;}
+
+#news_ticker a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+ 
+@-webkit-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -26px;}
+  50%  {margin-top: -52px;}
+  75%  {margin-top: -78px;}
+  100% {margin-top: 0;}
+}
+@-moz-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -26px;}
+  50%  {margin-top: -52px;}
+  75%  {margin-top: -78px;}
+  100% {margin-top: 0;}
+}
+@-ms-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -26px;}
+  50%  {margin-top: -52px;}
+  75%  {margin-top: -78px;}
+  100% {margin-top: 0;}
+}
+@keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -26px;}
+  50%  {margin-top: -52px;}
+  75%  {margin-top: -78px;}
+  100% {margin-top: 0;}
+}
+
+/*--------------------------------------*\
+* PANELS TRANSITION
+\*--------------------------------------*/
+
+.panel{
+  min-width: 95%;
+  height: 98%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /*margin-top: -190%;*/
+  -webkit-transform: translateY(-190%);
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  background: #000;
+  box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+  z-index: 2;
+  -webkit-transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  -o-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+.panel:target{
+  margin-top: 0%;
+  /*top:0px;*/
+  -webkit-transform: translateY(0);
+  visibility: visible;
+  background-color: rgba(50, 205,50, 0.8)!important;
+}
+
+
+.panel2{
+  width: 95%;
+  min-height: 98%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  background-color: #000;
+  box-shadow: 4px -4px 4px rgba(0,0,0,0.2);
+  -webkit-transform: translateX(-190%);
+  z-index:2;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+
+}
+.panel2:target{
+  -webkit-transform: translateX(0);
+  margin-left: 0%;
+  visibility: visible;
+  background-color: rgba(0,100,0,0.5);
+}
+
+.panel3{
+     width: 55%;
+  min-height: 98%;
+  position: absolute;
+  visibility: hidden;
+
+  background-color: #000;
+  box-shadow: 4px -4px 4px rgba(0,0,0,0.2);
+  margin-left: -102%;
+  z-index:2;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+.panel3:target{
+    top:0px;
+  margin-left: 0%;
+  visibility: visible;
+  background-color: black;
+}
+
+/*--------------------------------------*\
+* LINKS
+\*--------------------------------------*/
+/*----------------------------------------*\
+*TRANSITION OTHER DIRECTION
+\*------------------------------------------*/
+#heartT:target ~ #header #navigation #link-heartT,
+#menuT:target ~ #header #menu #link-menuT,
+#proteinsT:target ~ #header #navigation #link-proteinsT,
+#grainsT:target ~ #header #navigation #link-grainsT,
+#fruitsT:target ~ #header #navigation #link-fruitsT,
+#veggiesT:target ~ #header #navigation #link-veggiesT,
+#waterT:target ~ #header #navigation #link-waterT,
+#exerciseT:target ~ #header #navigation #link-exerciseT,
+#statsT:target ~ #header #navigation #link-statsT{
+  background: #000;
+  color: #fff;
+}
